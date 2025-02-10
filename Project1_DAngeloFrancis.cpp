@@ -1,20 +1,58 @@
-// Project1_DAngeloFrancis.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//************************************************
+// TITLE: Rock Paper Scissors                    *
+// FILE NAME: Project1_DAngeloFrancis.cpp        *
+// PROGRAMMER: D'Angelo Francis                  *
+// DATE: February 10, 2025                       *
+// REQUIREMENTS:Create a game of rock, paper,    *
+// scissors vs the computer                      *
+//************************************************
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+//************************************************
+// Definition of function gameRunning            *
+// This function uses a boolean to determine     * 
+// whether the game is running or not.           *
+//************************************************
+
+bool gameRunning();
+
+int playerChoice();
+
+int main() {
+	gameRunning();
+	while (bool gameRunning = true) {
+		cout << "ROCK PAPER SCISSORS TOURNAMENT \n";
+		cout << "******************************* \n\n";
+
+		playerChoice();
+
+		cout << "Player selected " << playerChoice << ".\n\n";
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+bool gameRunning() {
+	bool gameRunning = true;
+	return gameRunning;
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int playerChoice() {
+	int playerChoice;
+
+	do {
+		cout << "MAKE YOUR SELECTION:\n\n";
+		cout << "1. ROCK\n";
+		cout << "2. PAPER\n";
+		cout << "3. SCISSORS\n";
+		cout << "4. QUIT\n\n";
+		
+		cout << "(Enter a number 1-4 to make your choice): ";
+		cin >> playerChoice;
+
+		if (playerChoice < 1 || playerChoice > 4)
+			cout << "*ERROR* Invalid choice. Try again.\n\n";
+	} while (playerChoice < 1 || playerChoice > 4);
+
+	return playerChoice;
+}
