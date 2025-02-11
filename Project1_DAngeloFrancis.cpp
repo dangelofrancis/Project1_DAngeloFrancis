@@ -124,8 +124,11 @@ int getPlayerChoice(bool& gameRunning) {
         cout << "(Enter a number 1-4 to make your choice): ";
         cin >> choice;
 
-        if (choice < 1 || choice > 4)
+        if (choice < 1 || choice > 4 || cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
             cout << "*ERROR* Invalid choice. Try again.\n\n";
+        }
     } while (choice < 1 || choice > 4);
 
     if (choice == 4) {
