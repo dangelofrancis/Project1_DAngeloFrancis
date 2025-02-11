@@ -17,13 +17,59 @@ using namespace std;
 const int MAX_TESTS = 10;
 const int MAX_STUDENTS = 60;
 
+//************************************************
+// Description of the function getFileName       *
+// This function asks for the file name          *
+//************************************************
+
 string getFileName();
+
+//************************************************
+// Description of the function openFile          *
+// This function opens the file                  *
+//************************************************
+
 ifstream openFile(string fileName);
+
+//************************************************
+// Description of the function readFile          *
+// This function reads the file and puts the data*
+// into arrays                                   *
+//************************************************
+
 int readFile(ifstream& inputFile, string studentNames[], double testScores[][MAX_TESTS], int& numTests);
+
+//************************************************
+// Description of the function closeFile        *
+// This function closes the file that was opened*         
+//***********************************************
+
 void closeFile(ifstream& inputFile);
+
+//************************************************
+// Description of the function calculateAverages *     
+// This function calculates the grade averages   *
+//************************************************
+
 void calculateAverages(double testScores[][MAX_TESTS], double averages[], int numStudents, int numTests);
+
+//************************************************
+// Description of the function getLetterGrade    *
+// This function gives a letter grade for average*
+//************************************************
+
 char getLetterGrade(double average);
+
+//************************************************
+// Description of the function displayGrades     *
+// This function displays the name and grade     *
+//************************************************
+
 void displayGrades(string studentNames[], double averages[], int numStudents);
+
+//************************************************
+// the main function.                            *
+//************************************************
 
 int main() {
     string studentNames[MAX_STUDENTS]; 
