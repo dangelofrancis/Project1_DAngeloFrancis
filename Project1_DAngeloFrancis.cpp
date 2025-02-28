@@ -14,7 +14,7 @@
 #include <iomanip>
 using namespace std;
 
-const int MAX_TESTS = 10;
+const int MAX_TESTS = 5;
 const int MAX_STUDENTS = 60;
 
 //************************************************
